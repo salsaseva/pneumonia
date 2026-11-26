@@ -190,7 +190,7 @@ for bar, mean_val, std_val, feat_name in zip(bars, means, stds, df_perm_sorted['
                 ha='left', va='center', fontsize=9, weight='bold', color='#1a202c')
 
 ax.set_xlabel('Penurunan F1-Score (%) saat Nilai Fitur Diacak (Permuted)', fontsize=11, weight='bold')
-ax.set_title('Tingkat Kepentingan Fitur GLCM Berdasarkan Permutation Importance\n(Evaluasi Data Uji Bebas Bias Multikolinieritas)', fontsize=11.5, weight='bold', pad=12)
+ax.set_title('Tingkat Kepentingan Fitur GLCM Berdasarkan Permutation Feature Importance\npada Data Uji Resmi (Protokol P2)', fontsize=11.5, weight='bold', pad=12)
 ax.grid(axis='x', linestyle='--', alpha=0.4)
 ax.set_xlim(0, max(means + stds) * 1.38)
 
@@ -256,7 +256,7 @@ for rects in [rects_acc, rects_f1, rects_spe]:
                      xytext=(0, 3), textcoords="offset points", ha='center', va='bottom', fontsize=7.5, weight='bold')
 
 ax2.set_ylabel('Nilai Persentase (%)', fontsize=10, weight='bold')
-ax2.set_title('(b) Kuantifikasi Optimism Gap Lintas Protokol Partisi Data', fontsize=10.5, weight='bold', pad=10)
+ax2.set_title('(b) Variasi Kinerja Model Lintas Tiga Protokol Pembagian Data (P1, P2, P3)', fontsize=10.5, weight='bold', pad=10)
 ax2.set_xticks(x_p)
 ax2.set_xticklabels(['P1\n(Acak Citra)', 'P2\n(Resmi 624)', 'P3\n(Murni Pasien)'], fontsize=9.5, weight='bold')
 ax2.set_ylim(45, 100)
