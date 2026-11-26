@@ -1,0 +1,6 @@
+Acc Mean (%),Acc CI Lower (%),Acc CI Upper (%),F1 Mean (%),F1 CI Lower (%),F1 CI Upper (%),Model
+78.21,75.0,81.57,83.76,80.92,86.41,KNN
+79.37,76.28,82.69,84.63,82.06,87.38,SVM
+76.97,73.72,80.29,83.31,80.73,85.88,Random Forest
+79.34,76.28,82.69,84.87,82.23,87.56,Ensemble Soft Voting
+79.81,76.6,82.85,84.51,81.74,87.1,Voting (SMOTE)

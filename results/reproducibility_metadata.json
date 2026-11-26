@@ -1,0 +1,26 @@
+{
+  "platform": "macOS-26.2-arm64-arm-64bit-Mach-O",
+  "python_version": "3.14.3",
+  "scikit_learn_version": "1.9.1",
+  "imbalanced_learn_version": "0.14.2",
+  "opencv_version": "5.1.0",
+  "scikit_image_version": "0.26.0",
+  "random_seed": 42,
+  "best_hyperparameters": {
+    "knn": {
+      "n_neighbors": 11
+    },
+    "svm": {
+      "kernel": "rbf",
+      "C": 100.0,
+      "gamma": "scale",
+      "probability": true
+    },
+    "rf": {
+      "n_estimators": 300,
+      "max_depth": null,
+      "min_samples_leaf": 2
+    }
+  },
+  "execution_time_seconds": 232.41
+}

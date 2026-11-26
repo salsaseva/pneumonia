@@ -1,0 +1,4 @@
+Kondisi,Akurasi (%),F1-Score (%),Keterangan
+Baseline (Citra Utuh 0% Crop),79.33,84.88,Standar evaluasi resmi
+Crop Tepi 10%,68.59,79.24,Evaluasi robustitas terhadap penanda/tepi
+Crop Tepi 15%,63.14,77.09,Evaluasi robustitas terhadap penanda/tepi

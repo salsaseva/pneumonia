@@ -9,8 +9,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Large Dataset (raw images ~2.3GB)
+# Large Dataset & Cache
 chest_xray/
+data/cache/
+*.npz
 
 # OS / Editor specific
 .DS_Store

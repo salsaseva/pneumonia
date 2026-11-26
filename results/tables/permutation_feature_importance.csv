@@ -1,0 +1,7 @@
+Fitur,Permutation Importance Mean,Permutation Importance Std
+dissimilarity,0.07512,0.00577
+homogeneity,0.06465,0.00457
+contrast,0.04928,0.00784
+energy,0.04113,0.00706
+correlation,0.03456,0.00683
+ASM,0.02292,0.00613

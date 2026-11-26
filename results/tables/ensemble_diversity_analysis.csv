@@ -1,0 +1,11 @@
+Model Pair,Disagreement Rate (%),Yule Q-Statistic,Error Correlation (r),N11 (Both Error),N00 (Both Correct),"N10 (M1 Error, M2 Correct)","N01 (M1 Correct, M2 Error)"
+KNN vs SVM,4.65,0.993,0.8616,118,477,18,11
+KNN vs Random Forest,7.05,0.983,0.798,118,462,18,26
+KNN vs Ensemble Soft Voting,4.01,0.995,0.8807,120,479,16,9
+KNN vs Voting (SMOTE),4.17,0.9949,0.8755,118,480,18,8
+SVM vs Random Forest,7.21,0.9832,0.7911,114,465,15,30
+SVM vs Ensemble Soft Voting,3.21,0.9965,0.9023,119,485,10,10
+SVM vs Voting (SMOTE),4.65,0.9924,0.8572,113,482,16,13
+Random Forest vs Ensemble Soft Voting,4.97,0.9936,0.8569,121,472,23,8
+Random Forest vs Voting (SMOTE),8.01,0.9789,0.7668,110,464,34,16
+Ensemble Soft Voting vs Voting (SMOTE),6.25,0.9854,0.8079,108,477,21,18

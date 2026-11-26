@@ -1,0 +1,11 @@
+Model A,Model B,b,c,Statistik,p-value,Alpha Bonferroni,Signifikan?,Kesimpulan
+KNN,SVM,11,18,1.2414,0.26521,0.005,Tidak,Tidak Signifikan (Setara)
+KNN,Random Forest,26,18,1.1136,0.29129,0.005,Tidak,Tidak Signifikan (Setara)
+KNN,Ensemble Soft Voting,9,16,1.44,0.23014,0.005,Tidak,Tidak Signifikan (Setara)
+KNN,Voting (SMOTE),8,18,3.1154,0.07756,0.005,Tidak,Tidak Signifikan (Setara)
+SVM,Random Forest,30,15,4.3556,0.03689,0.005,Tidak,Tidak Signifikan (Setara)
+SVM,Ensemble Soft Voting,10,10,10.0,1.00000,0.005,Tidak,Tidak Signifikan (Setara)
+SVM,Voting (SMOTE),13,16,0.1379,0.71035,0.005,Tidak,Tidak Signifikan (Setara)
+Random Forest,Ensemble Soft Voting,8,23,6.3226,0.01192,0.005,Tidak,Tidak Signifikan (Setara)
+Random Forest,Voting (SMOTE),16,34,5.78,0.01621,0.005,Tidak,Tidak Signifikan (Setara)
+Ensemble Soft Voting,Voting (SMOTE),18,21,0.1026,0.74877,0.005,Tidak,Tidak Signifikan (Setara)
