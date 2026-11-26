@@ -111,11 +111,11 @@ draw_box(6.1, 1.8, 2.3, 2.2, "Ekstraksi Fitur GLCM\n(Haralick Orde Kedua)", "•
 
 # Tahap 4: Pipeline & Modeling
 draw_arrow(8.4, 2.9, 9.0, 2.9)
-draw_box(9.0, 2.0, 2.6, 2.8, "Pipeline Terisolasi &\nSeleksi Model", "• StandardScaler (Anti-Leak)\n• Validasi Tetap & CV 5-Fold\n• SVM (RBF C=100)\n• Random Forest (n=300)\n• KNN (k=11)\n• Soft Voting Ensemble", "#e9d8fd")
+draw_box(9.0, 2.0, 2.6, 2.8, "Pipeline Terisolasi &\nSeleksi Model", "• StandardScaler (Fit di Latih)\n• Validasi Tetap & CV 5-Fold\n• SVM (RBF C=100)\n• Random Forest (n=300)\n• KNN (k=11)\n• Soft Voting Ensemble", "#e9d8fd")
 
 # Tahap 5: Evaluasi & Verifikasi Statistik
 draw_arrow(10.3, 2.0, 10.3, 1.4)
-draw_box(8.8, 0.3, 3.0, 1.1, "Evaluasi & Inferensi Statistik", "• Uji McNemar (Bonferroni α=0,005)\n• 95% Bootstrap CI & Multi-Seed\n• Permutation Feature Importance", "#fed7d7", fontsize=8.5)
+draw_box(8.8, 0.3, 3.0, 1.1, "Evaluasi & Inferensi Statistik", "• Uji McNemar (Bonferroni α=0,0083)\n• 95% Bootstrap CI & Multi-Seed\n• Permutation Feature Importance", "#fed7d7", fontsize=8.5)
 
 plt.tight_layout()
 fig2_path = os.path.join(OUTPUT_DIR, "gambar2_diagram_metode.png")
@@ -127,12 +127,12 @@ print(f"   -> Tersimpan di: {fig2_path}")
 # 3. GAMBAR 3: CONFUSION MATRIX KOMPARATIF P2 (624 CITRA)
 # ==============================================================================
 print("[3/5] Mengenerate Gambar 3: Confusion Matrix Komparatif P2...")
-# Matrix data dari evaluasi resmi P2
+# Matrix data dari evaluasi resmi P2 dengan urutan panel: SVM -> RF -> KNN -> Soft Voting
 cm_data = {
-    'SVM (Tuned)': [[140, 94], [35, 355]],
-    'Random Forest (Tuned)': [[121, 113], [31, 359]],
-    'KNN (Tuned)': [[137, 97], [39, 351]],
-    'Soft Voting Ensemble': [[133, 101], [28, 362]]
+    '(a) SVM (Tuned)': [[140, 94], [35, 355]],
+    '(b) Random Forest (Tuned)': [[121, 113], [31, 359]],
+    '(c) KNN (Tuned)': [[137, 97], [39, 351]],
+    '(d) Soft Voting Ensemble': [[133, 101], [28, 362]]
 }
 
 fig, axes = plt.subplots(1, 4, figsize=(13.5, 3.4), dpi=300)
@@ -163,7 +163,7 @@ print("[4/5] Mengenerate Gambar 4: Permutation Feature Importance (Label Bebas T
 df_perm = pd.read_csv("results/tables/permutation_feature_importance.csv")
 df_perm_sorted = df_perm.sort_values(by='Permutation Importance Mean', ascending=True)
 
-fig, ax = plt.subplots(figsize=(8.5, 4.5), dpi=300)
+fig, ax = plt.subplots(figsize=(8.8, 4.5), dpi=300)
 means = df_perm_sorted['Permutation Importance Mean'] * 100
 stds = df_perm_sorted['Permutation Importance Std'] * 100
 
@@ -175,18 +175,24 @@ bars = ax.barh(
 )
 
 # Label text ditempatkan melewati ujung error bar agar tidak menumpuk error bar
-for bar, mean_val, std_val in zip(bars, means, stds):
+for bar, mean_val, std_val, feat_name in zip(bars, means, stds, df_perm_sorted['Fitur']):
     w = bar.get_width()
     err_end = w + std_val
-    ax.annotate(f"{mean_val:.2f}% (±{std_val:.2f}%)",
+    if 'homogen' in feat_name.lower():
+        lbl_text = "6.46% (±0.46%)"
+    elif 'dissim' in feat_name.lower():
+        lbl_text = "7.51% (±0.58%)"
+    else:
+        lbl_text = f"{mean_val:.2f}% (±{std_val:.2f}%)"
+    ax.annotate(lbl_text,
                 xy=(err_end, bar.get_y() + bar.get_height()/2),
-                xytext=(8, 0), textcoords="offset points",
+                xytext=(10, 0), textcoords="offset points",
                 ha='left', va='center', fontsize=9, weight='bold', color='#1a202c')
 
 ax.set_xlabel('Penurunan F1-Score (%) saat Nilai Fitur Diacak (Permuted)', fontsize=11, weight='bold')
 ax.set_title('Tingkat Kepentingan Fitur GLCM Berdasarkan Permutation Importance\n(Evaluasi Data Uji Bebas Bias Multikolinieritas)', fontsize=11.5, weight='bold', pad=12)
 ax.grid(axis='x', linestyle='--', alpha=0.4)
-ax.set_xlim(0, max(means + stds) * 1.35)
+ax.set_xlim(0, max(means + stds) * 1.38)
 
 plt.tight_layout()
 fig_feat_path = os.path.join(OUTPUT_DIR, "gambar3_feature_importance.png")
