@@ -575,8 +575,16 @@ def main():
     print("Re-ordering Chapter 4 completed successfully!")
 
     # =========================================================================
-    # 10. REMOVE [22] FROM REFERENCES
+    # 10. VERIFY & UPDATE REFERENCES METADATA ([5], [9], [18], & REMOVE [22])
     # =========================================================================
+    print("10. Updating References metadata and removing [22]...")
+    for p in doc.paragraphs:
+        if p.text.startswith("[5]"):
+            p.text = "[5]   C. Cillóniz, C. Dominedò, J. M. Pericàs, D. Rodriguez-Hurtado, and A. Torres, “Community-acquired pneumonia in critically ill very old patients: a growing problem,” European Respiratory Review, vol. 29, no. 155, art. 190126, pp. 1–11, Mar. 2020, doi: 10.1183/16000617.0126-2019."
+        elif p.text.startswith("[9]"):
+            p.text = "[9]   S. T. Erukude, V. C. Marella, and S. R. Veluru, “Explainable deep learning in medical imaging: Brain tumor and pneumonia detection,” in Proc. 4th IEEE Int. Conf. Innovative Mechanisms for Industry Applications (ICIMIA), Oct. 2025, pp. 906–911, doi: 10.1109/ICIMIA67127.2025.11200629."
+        elif p.text.startswith("[18]"):
+            p.text = "[18]  A. Shati, G. M. Hassan, and A. Datta, “A comprehensive fusion model for improved pneumonia prediction based on KNN-wavelet-GLCM and a residual network,” Intelligent Systems with Applications, vol. 26, art. 200492, pp. 1–15, Jun. 2025, doi: 10.1016/j.iswa.2025.200492."
     print("10. Removing [22] from References...")
     p_ref_22 = None
     for p in doc.paragraphs:
