@@ -1,0 +1,4 @@
+Kondisi Masking Tepi,Akurasi (%),F1-Score (%),Spesifisitas (%),Perubahan Akurasi,Keterangan
+Baseline (0% Masking),74.68,78.06,79.06,-4.65 poin,Bebas distorsi skala (resolusi asli dimasker sebelum resize)
+Masking Pinggir 10% Tanpa Resize,66.99,78.81,14.96,-12.34 poin,Bebas distorsi skala (resolusi asli dimasker sebelum resize)
+Masking Pinggir 15% Tanpa Resize,62.5,76.92,0.0,-16.83 poin,Bebas distorsi skala (resolusi asli dimasker sebelum resize)

@@ -1,0 +1,5 @@
+Skema Latih -> Uji,Akurasi (%),F1-Score (%),Domain Evaluasi
+P2 Train (Official) -> P2 Test (Official),79.33,84.62,Intra-Domain (P2 -> P2)
+P2 Train (Official) -> P3 Test (Strict Patient),83.07,88.01,Cross-Domain (P2 -> P3)
+P3 Train (Strict Patient) -> P3 Test (Strict Patient),83.75,88.5,Intra-Domain (P3 -> P3)
+P3 Train (Strict Patient) -> P2 Test (Official),83.49,87.48,Cross-Domain (P3 -> P2)

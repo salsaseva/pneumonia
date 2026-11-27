@@ -1,0 +1,4 @@
+Kelompok Fitur,Jumlah Fitur,Penurunan F1-Score (%),Penurunan Akurasi (%),Efek Multikolinieritas
+"Grup Variasi Kontras Lokal {Contrast, Dissimilarity, Homogeneity}",3,18.16 ± 1.19,24.42 ± 1.48,Masking tereliminasi (fitur berkorelasi diacak bersamaan)
+"Grup Keteraturan & Energi {ASM, Energy}",2,10.94 ± 0.96,15.87 ± 1.39,Masking tereliminasi (fitur berkorelasi diacak bersamaan)
+Grup Korelasi Linear {Correlation},1,6.34 ± 0.77,7.44 ± 1.02,Masking tereliminasi (fitur berkorelasi diacak bersamaan)

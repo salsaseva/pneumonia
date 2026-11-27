@@ -111,7 +111,7 @@ draw_box(6.1, 1.8, 2.3, 2.2, "Ekstraksi Fitur GLCM\n(Haralick Orde Kedua)", "•
 
 # Tahap 4: Pipeline & Modeling
 draw_arrow(8.4, 2.9, 9.0, 2.9)
-draw_box(9.0, 2.0, 2.6, 2.8, "Pipeline Terisolasi &\nSeleksi Model", "• StandardScaler (Fit di Latih)\n• Validasi Tetap & CV 5-Fold\n• SVM (RBF C=100)\n• Random Forest (n=300)\n• KNN (k=11)\n• Soft Voting Ensemble", "#e9d8fd")
+draw_box(9.0, 2.0, 2.6, 2.8, "Pipeline Terisolasi &\nSeleksi Model", "• StandardScaler (Fit di Latih)\n• Validasi Tetap (1.047) & CV\n• SVM (RBF C=100)\n• RF (n=300)\n• KNN (k=65 / Tuned k=11)\n• Soft Voting Ensemble", "#e9d8fd")
 
 # Tahap 5: Evaluasi & Verifikasi Statistik
 draw_arrow(10.3, 2.0, 10.3, 1.4)

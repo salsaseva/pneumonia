@@ -1,0 +1,8 @@
+Model,Akurasi (%),F1-Score (%),ROC-AUC,Brier Score,ECE,Kualitas Kalibrasi
+SVM Tuned (RBF),82.37,86.75,0.8916,0.1375,0.0907,Sangat Baik
+Random Forest Tuned,79.17,84.63,0.8673,0.1515,0.0921,Baik
+KNN Tuned (k=11),80.13,84.99,0.8501,0.1529,0.057,Baik
+Logistic Regression,79.33,84.98,0.8899,0.1414,0.0921,Sangat Baik
+HistGradientBoosting,79.49,84.65,0.869,0.1514,0.0988,Baik
+Soft Voting (SVM+RF+KNN),80.77,85.61,0.8792,0.1427,0.0857,Sangat Baik
+Expanded Soft Voting (5 Model),81.41,86.09,0.8837,0.1411,0.0876,Sangat Baik

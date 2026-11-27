@@ -1,0 +1,2 @@
+Pasangan Komparasi,Akurasi Voting (%),Akurasi SVM (%),Selisih Akurasi (%),95% CI Selisih (%),Margin TOST (Δ),TOST p-value,Keputusan TOST,Rekomendasi Naskah
+Soft Voting vs SVM Tuned,80.77,82.37,-1.6,"[-3.32%, 0.11%]",±2.0%,0.3251,Inkonklusif pada margin ±2%,"Tulis: Tidak ada bukti perbedaan yang signifikan secara statistik (p > 0,0083)"

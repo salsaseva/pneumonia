@@ -1,0 +1,5 @@
+Eksperimen,Fitur Dibuang,Akurasi Uji (%),F1-Score (%),Delta Akurasi (%)
+Model Lengkap (6 Fitur GLCM),Tidak Ada,79.33,84.62,0.0
+Drop Variasi,"Grup Variasi Kontras Lokal {Contrast, Dissimilarity, Homogeneity}",73.4,82.11,-5.93
+Drop Keteraturan,"Grup Keteraturan & Energi {ASM, Energy}",77.24,83.29,-2.09
+Drop Korelasi,Grup Korelasi Linear {Correlation},76.6,83.02,-2.73

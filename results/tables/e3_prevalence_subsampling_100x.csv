@@ -1,0 +1,6 @@
+Protokol,N Uji,Prevalensi Pneu (%),Akurasi (%),F1-Score (%),Catatan
+P1 (Acak Citra) - Asli,1172,72.95,83.28,88.42,Prevalensi asli 72.95%
+P1 Subsampled (100x),624,62.5,81.73 ± 0.99,85.68 ± 0.82,"CI 95%: [79.72%, 83.49%]"
+P3 (Murni Pasien) - Asli,880,70.23,83.75,88.5,Prevalensi asli 72.95%
+P3 Subsampled (100x),624,62.5,82.40 ± 0.62,86.35 ± 0.52,"CI 95%: [81.25%, 83.65%]"
+P2 (Resmi Kaggle),624,62.5,79.33,84.62,Himpunan uji resmi P2
