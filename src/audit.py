@@ -50,8 +50,12 @@ def run_audit(dataset_dir=DATASET_DIR, output_dir=AUDIT_DIR):
                     pid = m.group(1) if m else f"UNK_PNEU_{fname}"
                     sub_type = 'bacteria' if 'bacteria' in fname else ('virus' if 'virus' in fname else 'unknown')
                 else:
-                    m = re.match(r'^(NORMAL2-IM-\d+|IM-\d+)', fname)
-                    pid = m.group(1) if m else fname.split('.')[0]
+                    m = re.match(r'^(NORMAL2-IM-\d+|IM-\d+)-', fname)
+                    if m:
+                        pid = m.group(1)
+                    else:
+                        m2 = re.match(r'^(NORMAL2-IM-\d+|IM-\d+)', fname)
+                        pid = m2.group(1) if m2 else fname.split('.')[0]
                     sub_type = 'normal'
 
                 records.append({
