@@ -3,7 +3,7 @@ Skrip Penuh Pembuatan Figur Jurnal Berstandar Publikasi (300 DPI):
 1. Gambar 1: Sampel Citra X-Ray (Normal vs Pneumonia, Asli vs 150x150 Grayscale)
 2. Gambar 2: Diagram Alur Metode Usulan (Proposed Method: 3 Protokol, 150x150, 3 Pra-pengolahan, GLCM-6, StandardScaler, Validasi/CV, Soft Voting)
 3. Gambar 3 (di naskah Gambar 5): Matriks Konfusi 4 Model pada Data Uji Resmi 624 Citra (Protokol P2)
-4. Gambar 4: Permutation Feature Importance Bebas Multikolinieritas (Label rapi tanpa tumpang tindih error bar)
+4. Gambar 4: Permutation Feature Importance GLCM-6 pada Protokol P2 (Label rapi tanpa tumpang tindih error bar)
 5. Gambar 5 (di naskah Gambar 6): Panel Komparasi Metrik Evaluasi P2 + Visualisasi Optimism Gap P1 vs P2 vs P3 + Kurva ROC
 """
 import os
@@ -159,7 +159,7 @@ print(f"   -> Tersimpan di: {fig_cm_path}")
 # ==============================================================================
 # 4. GAMBAR 4: PERMUTATION FEATURE IMPORTANCE (LABEL BEBAS TUMPANG TINDIH)
 # ==============================================================================
-print("[4/5] Mengenerate Gambar 4: Permutation Feature Importance (Label Bebas Tumpang Tindih)...")
+print("[4/5] Mengenerate Gambar 4: Permutation Feature Importance...")
 df_perm = pd.read_csv("results/tables/permutation_feature_importance.csv")
 df_perm_sorted = df_perm.sort_values(by='Permutation Importance Mean', ascending=True)
 
